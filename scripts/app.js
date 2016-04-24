@@ -9,7 +9,8 @@ navigator.getUserMedia = (navigator.getUserMedia ||
 // set up forked web audio context, for multiple browsers
 // window. is needed otherwise Safari explodes
 
-var audioCtx = new (window.AudioContext || window.webkitAudioContext)();
+var audioCtx = new ("../audio/SpaceOddity_Clip01.wav")();
+//var audioCtx = new (window.AudioContext || window.webkitAudioContext)();
 var voiceSelect = document.getElementById("voice");
 var source;
 var stream;
