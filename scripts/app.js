@@ -102,7 +102,12 @@ if (navigator.getUserMedia) {
 
       // Success callback
       function(stream) {
-         source = audioCtx.createMediaElementSource("audio/SpaceOddity_Clip01.wav");
+
+        var audio = new Audio();
+
+        audio.src = "audio/SpaceOddity_Clip01.wav";
+
+         source = audioCtx.createMediaElementSource(audio);
 //         source = audioCtx.createMediaStreamSource(stream);
          source.connect(analyser);
          analyser.connect(distortion);
