@@ -11,7 +11,7 @@ navigator.getUserMedia = (navigator.getUserMedia ||
 
 var audio = new Audio();
 
-audio.src = "../audio/SpaceOddity_Clip01.wav";
+audio.src = "audio/SpaceOddity_Clip01.wav";
 var audioCtx = new (window.AudioContext || window.webkitAudioContext)();
 var voiceSelect = document.getElementById("voice");
 var source = audioCtx.createMediaElementSource(audio);
