@@ -9,10 +9,12 @@ navigator.getUserMedia = (navigator.getUserMedia ||
 // set up forked web audio context, for multiple browsers
 // window. is needed otherwise Safari explodes
 
-var audioCtx = new ("../audio/SpaceOddity_Clip01.wav")();
-//var audioCtx = new (window.AudioContext || window.webkitAudioContext)();
+var audio = new Audio();
+
+audio.src = "../audio/SpaceOddity_Clip01.wav";
+var audioCtx = new (window.AudioContext || window.webkitAudioContext)();
 var voiceSelect = document.getElementById("voice");
-var source;
+var source = audioCtx.createMediaElementSource(audio);
 var stream;
 
 // grab the mute button to use below
