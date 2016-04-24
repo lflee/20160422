@@ -102,7 +102,8 @@ if (navigator.getUserMedia) {
 
       // Success callback
       function(stream) {
-         source = audioCtx.createMediaStreamSource(stream);
+         source = audioCtx.createMediaElementSource("audio/SpaceOddity_Clip01.wav");
+//         source = audioCtx.createMediaStreamSource(stream);
          source.connect(analyser);
          analyser.connect(distortion);
          distortion.connect(biquadFilter);
